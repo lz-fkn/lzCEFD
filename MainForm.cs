@@ -13,21 +13,21 @@ namespace CefdSharp
 {
     public partial class MainForm : Form
     {
-        private string compressionMethod;
+        private string compressionMethod = null!;
         private int compressionLevel;
         private string sevenZipPath = "7za.x64.exe";
         private const string FileSignature = "lzCEFDv1\n";
         private const string RegistryPath = "Software\\Elzzie\\lzCEFD";
 
-        private TextBox inputBox;
-        private TextBox keyBox;
-        private ProgressBar progressBar;
-        private Button encryptBtn;
-        private Button decryptBtn;
+        private TextBox inputBox = null!;
+        private TextBox keyBox = null!;
+        private ProgressBar progressBar = null!;
+        private Button encryptBtn = null!;
+        private Button decryptBtn = null!;
 
         public MainForm()
         {
-            InitializeComponent();
+            // InitializeComponent();
             LoadSettings();
             InitUI();
         }
